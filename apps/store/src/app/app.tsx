@@ -18,9 +18,11 @@ import { Route, Link } from 'react-router-dom';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { StoreFeatureGameDetail } from '@bg-hoard/store/feature-game-detail';
 
+import { Game } from '@bg-hoard/util-interface';
+
 export const App = () => {
   const [state, setState] = useState<{
-    data: any[];
+    data: Game[];
     loadingState: 'success' | 'error' | 'loading';
   }>({
     data: [],

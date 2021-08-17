@@ -11,6 +11,8 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import { formatRating } from '@bg-hoard/store/util-formatters';
 
+import { Game } from '@bg-hoard/util-interface';
+
 type TParams = { id: string };
 
 /* eslint-disable-next-line */
@@ -19,7 +21,7 @@ export interface StoreFeatureGameDetailProps
 
 export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
   const [state, setState] = useState<{
-    data: any;
+    data: Partial<Game>;
     loadingState: 'success' | 'error' | 'loading';
   }>({
     data: {},
@@ -77,7 +79,7 @@ export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
               component="p"
               className={styles['game-rating']}
             >
-              <strong>Rating:</strong> {formatRating(state.data.rating)}
+              <strong>Rating:</strong> {state.data.rating && formatRating(state.data.rating)}
             </Typography>
           </CardContent>
           <CardActions>
