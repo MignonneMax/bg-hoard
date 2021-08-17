@@ -6,9 +6,13 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import { Header } from '@bg-hoard/store/ui-shared';
+import { formatRating } from '@bg-hoard/store/util-formatters';
 
 export const App = () => {
   return (
+    <>
+    <Header title="Board Game Hoard" />
     <div className={styles.container}>
       <div className={styles['games-layout']}>
         {getAllGames().map((x) => (
@@ -32,7 +36,7 @@ export const App = () => {
                   component="p"
                   className={styles['game-rating']}
                 >
-                  <strong>Rating:</strong> {x.rating}
+                  <strong>Rating:</strong> {formatRating(x.rating)}
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -40,6 +44,7 @@ export const App = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
