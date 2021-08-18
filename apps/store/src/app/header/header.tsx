@@ -1,12 +1,14 @@
 import './header.module.scss';
 
 /* eslint-disable-next-line */
-export interface HeaderProps {}
+export interface HeaderProps {
+  title: string
+}
 
-export function Header(props: HeaderProps) {
+export function Header({title}: HeaderProps) {
   return (
     <div>
-      <h1>Welcome to Header!</h1>
+      <h1>{title}</h1>
     </div>
   );
 }
