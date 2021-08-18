@@ -22,6 +22,7 @@ import { Game } from '@bg-hoard/util-interface';
 
 export const App = () => {
   const name="Board Game Hoard" 
+  console.log(name)
   const [state, setState] = useState<{
     data: Game[];
     loadingState: 'success' | 'error' | 'loading';
