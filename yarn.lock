@@ -1817,7 +1817,7 @@
     semver "7.3.4"
     tslib "^2.0.0"
 
-"@nrwl/devkit@12.7.2":
+"@nrwl/devkit@12.7.2", "@nrwl/devkit@^12.7.2":
   version "12.7.2"
   resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-12.7.2.tgz#3ea39590dc29d6aa6cf970bc195c99641ae0b0ec"
   integrity sha512-Uk0DOkQ35sAMSMQPWNo+n4muDAueX651Seb66GSVbeHrFGNGPOM4X1iElYqocXevnMta1Q3xwragudXSdAnHkw==
